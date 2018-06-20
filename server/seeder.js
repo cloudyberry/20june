@@ -44,6 +44,11 @@ Meteor.startup(function() {
 Modules.insert({
   reviewName: "CS1020: Data Structures and Algorithms"
 });
+Modules.insert({
+  reviewName: "ACC1002: Financial Accounting", reviewName: "ACC1002X: Financial Accounting"
+});
+
+
       // User 1
       Accounts.createUser({
         username: 'User1',
@@ -276,7 +281,8 @@ Modules.insert({
             });
 
             var adminId = Meteor.users.findOne({username: 'Admin'})._id;
-            Meteor.users.update(adminId, {$set:{role:'admin'}})
+            Meteor.users.update(adminId, {$set:{role:'admin'}});
+          
 
       console.log("  ");
       console.log("User Database Seeded! Now get to work! :)");
