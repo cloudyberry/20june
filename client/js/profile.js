@@ -55,6 +55,19 @@ Template.profile.helpers({
 
 	editing: function() {
 		return Session.equals('editReviewId', this._id);
+	},
+
+	admin: function() {
+  var adminId = Meteor.users.findOne({username: 'Admin'})._id;
+	var userId = Meteor.userId();
+ 	if (userId === adminId) {
+	return true;
+}
+
+//	},
+		// adminVetted: function() {
+		// 	return
+		// },
 	}
 
 });

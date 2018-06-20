@@ -265,7 +265,7 @@ Modules.insert({
               username: 'Admin',
               email: 'admin@example.com',
               password: 'kainingandpam',
-              isDefault: true,
+              isDefault: 'true',
 
             /*  profile: {
                 likeScore: 0,
