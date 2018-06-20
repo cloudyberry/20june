@@ -41,7 +41,9 @@ Meteor.startup(function() {
         userId: user0Id,
       });
 
-
+Modules.insert({
+  reviewName: "CS1020: Data Structures and Algorithms"
+});
       // User 1
       Accounts.createUser({
         username: 'User1',
@@ -59,7 +61,7 @@ Meteor.startup(function() {
       var user1Id = Meteor.users.findOne({username: 'User1'})._id;
 
       Reviews.insert({
-        reviewName: "MA1312: Calculus for computing",
+        reviewName: "MA1312: Calculus with applications",
         reviewPost: "Prof makes the lectures very interesting",
         semester: "AY1718 S2",
         diff: "moderate",
@@ -78,7 +80,9 @@ Meteor.startup(function() {
         userId: user1Id,
       });
 
-
+Modules.insert({
+  reviewName:"MA1312: Calculus with applications"
+});
       // User 2
       Accounts.createUser({
         username: 'User2',
