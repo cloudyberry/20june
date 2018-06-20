@@ -14,3 +14,23 @@ Template.sidebar.events({
 		});
 	},
 });
+
+Template.sidebar.helpers({
+
+	admin: function() {
+  var adminId = Meteor.users.findOne({username: 'Admin'})._id;
+	var userId = Meteor.userId();
+ 	if (userId === adminId) {
+	return true;
+}
+
+},
+nonAdmin: function() {
+var adminId = Meteor.users.findOne({username: 'Admin'})._id;
+var userId = Meteor.userId();
+if (userId !== adminId) {
+return true;
+}
+	}
+
+});

@@ -64,10 +64,13 @@ Template.profile.helpers({
 	return true;
 }
 
-//	},
-		// adminVetted: function() {
-		// 	return
-		// },
+},
+nonAdmin: function() {
+var adminId = Meteor.users.findOne({username: 'Admin'})._id;
+var userId = Meteor.userId();
+if (userId !== adminId) {
+return true;
+}
 	}
 
 });
