@@ -100,7 +100,7 @@ p {
 }
 
 /*--------added-----------*/
-.modulecode, .semester, .diff, .workload, .steepness, .recommendation{
+.hideName, .modulecode, .semester, .diff, .workload, .steepness, .recommendation{
   text-align: left;
 }
 

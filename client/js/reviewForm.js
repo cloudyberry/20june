@@ -2,9 +2,12 @@ Template.reviewForm.rendered = function() {
 
 }
 
+
 Template.reviewForm.events({
+
 	"submit .review-post": function() {
 		//reviewName,semester,recommendation,diff,workload,steepness,reviewPost
+		var hideName = event.target.hideName.value;
 		var reviewName = event.target.reviewName.value;
 		var semester = event.target.semester.value;
 		var recommendation = event.target.recommendation.value;
@@ -12,15 +15,17 @@ Template.reviewForm.events({
 		var workload = event.target.workload.value;
 		var steepness = event.target.steepness.value;
 		var reviewPost = event.target.reviewPost.value;
-
-
 		//add new column and labels!
 
 		if (isNotEmpty(reviewName) &&
 			isNotEmpty(reviewPost) && isNotEmpty(semester)) {
 
-			Meteor.call('addReviews', reviewName, semester, recommendation, diff, workload, steepness, reviewPost);
+			Meteor.call('addReviews',hideName, reviewName, semester, recommendation, diff, workload, steepness, reviewPost);
 			//clear form
+			/*if (event.target.hideName.value===true) {
+				Meteor.call('hideName', thisReview);
+			}*/
+
 			event.target.reviewName.value = "";
 			event.target.reviewPost.value = "";
 			event.target.semester.value = "";
