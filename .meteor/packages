@@ -36,3 +36,8 @@ easysearch:autosuggest
 accounts-google
 google-config-ui
 
+meteorhacks:npm
+
+
+npm-container
+http

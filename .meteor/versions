@@ -81,6 +81,8 @@ localstorage@1.0.11
 logging@1.1.15_1
 meteor@1.6.1
 meteor-base@1.0.4
+meteorhacks:async@1.0.0
+meteorhacks:npm@1.5.0
 meteortoys:allthings@2.3.1
 meteortoys:authenticate@2.1.0
 meteortoys:autopub@2.1.0
@@ -109,6 +111,7 @@ mongo-livedata@1.0.12
 msavin:jetsetter@1.5.2
 msavin:mongol@1.6.2
 npm-bcrypt@0.9.1_1
+npm-container@1.2.0
 npm-mongo@1.5.50
 oauth@1.1.11
 oauth2@1.1.10
